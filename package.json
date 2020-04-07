@@ -1,0 +1,25 @@
+{
+  "name": "update-readme-with-project-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaumefe/update-readme-with-project-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillaumefe/update-readme-with-project-action/issues"
+  },
+  "homepage": "https://github.com/guillaumefe/update-readme-with-project-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "request": "^2.88.2"
+  }
+}
