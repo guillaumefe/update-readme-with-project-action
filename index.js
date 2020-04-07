@@ -12,10 +12,15 @@ try {
     request('https://api.github.com/repos/guillaumefe/backlog-opencovid19/projects', headers: headers, { json: true }, (err, res, body) => {
 
         if (err) { return console.log(err); }
-        const bodyValues = JSON.parse(body);
-        console.log(body.url);
-        console.log(body.explanation);
-        res.send(bodyValues);
+
+        request.put({url:'https://api.github.com/repos/guillaumefe/backlog-opencovid19/contents/helloworld', function(err,httpResponse,body){
+
+            const bodyValues = JSON.parse(body);
+            console.log(body.url);
+            console.log(body.explanation);
+            res.send(bodyValues);
+
+        })
 
     });
 
