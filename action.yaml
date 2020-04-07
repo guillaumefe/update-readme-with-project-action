@@ -1,5 +1,5 @@
 name: 'Update Readme'
 description: 'Display the project list right into README.md'
 runs:
-  using: 'node13'
+  using: 'node12'
   main: 'index.js'
