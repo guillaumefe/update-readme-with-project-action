@@ -1,5 +1,18 @@
-name: 'Update Readme'
-description: 'Display the project list right into README.md'
-runs:
-  using: 'node12'
-  main: 'index.js'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Create local changes
+      run: |
+        touch world
+        echo 'hello' > world
+    - name: Commit files
+      run: |
+        git config --local user.email "guillaume.ferron@gmail.com"
+        git config --local user.name "guillaumefe"
+        git commit -m "Add hello to world" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: "01dade6788815df0fc991d177a485dcd48480935"
