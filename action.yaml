@@ -4,14 +4,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Create local changes
-      run: |
-        touch world
-        echo 'hello' > world
+      run: touch world
     - name: Commit files
       run: |
         git config --local user.email "guillaume.ferron@gmail.com"
         git config --local user.name "guillaumefe"
-        git commit -m "Add hello to world" -a
+        git commit -m "Add world" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
