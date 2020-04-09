@@ -28,6 +28,7 @@ jobs:
       
     - name: Commit files
       run: |
+        git add world
         git config --local user.email "guillaume.ferron@gmail.com"
         git config --local user.name "guillaumefe"
         git commit -m "Add world" -a
