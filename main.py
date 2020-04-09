@@ -6,9 +6,9 @@ owner = 'guillaumefe'
 repository = 'update-readme-with-project-action'
 commit = 'automatic website update from projects'
 
-def git_push(repository):
+def git_push(repository, commit):
     try:
-        repo = Repo()
+        repo = Repo(repository)
         repo.git.add(update=True)
         repo.index.commit(commit)
         origin = repo.remote(name='origin')
@@ -27,6 +27,6 @@ with open('test/post_example.md', 'w') as file:
         file.write(str(entry))
 
 # Update website
-git_push(repository)
+git_push(repository, commit)
 
 print('done')
