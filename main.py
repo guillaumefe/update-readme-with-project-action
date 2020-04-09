@@ -8,7 +8,8 @@ commit = 'automatic website update from projects'
 
 def git_push(repository, commit):
     try:
-        repo = Repo(repository)
+        # repo = Repo(repository)
+        repo = Repo()
         repo.git.add(update=True)
         repo.index.commit(commit)
         origin = repo.remote(name='origin')
