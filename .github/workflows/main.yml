@@ -7,6 +7,7 @@ name: auto-publish-project
 on:
   push:
     branches: [ master ]
+    types: [created, edited]
     paths:
     - 'test/**'
 
